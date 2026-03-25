@@ -43,7 +43,7 @@ export default function Architects() {
               width={1000}
               height={600}
               alt={a.name}
-              className="w-full h-75 sm:h-150 object-cover grayscale-75 hover:grayscale-0 transition duration-300 rounded-lg"
+              className="w-full h-150 object-cover grayscale-75 hover:grayscale-0 transition duration-300 rounded-lg"
             />
 
             <div className="text-left">
