@@ -1,13 +1,26 @@
 import Image from "next/image";
-import React from "react";
 export default function Architects() {
   const architects = [
     {
       name: "Iroanya Smith Michael",
       title: "Founder & Chairman",
-      image: "/img1.png",
+      image: "/img1.jpg",
+      bio: [
+        "Founder | Financial Strategist | Innovation-Driven Executive",
+        "Iroanya Smith Michael is a financial strategist and startup executive with over five years of experience in financial management, strategic planning, and venture development. He is the Founder and CEO of Nearest Me, a platform focused on connecting Africa’s workforce through proximity-driven solutions.",
+        "He also leads Stacbridge Holdings, an investment company driving innovation across technology and scalable industries. With expertise in financial structuring, business development, and growth systems, Smith is committed to building ventures that deliver long-term economic impact across Africa.",
+      ],
     },
-    { name: "Adeoye Samuel", title: "Co-Founder", image: "/img2.png" },
+    {
+      name: "Adeoye Samuel",
+      title: "Co-Founder",
+      image: "/img2.jpg",
+      bio: [
+        "Co-Founder & Executive Director, Strategy & Corporate Development",
+        "Adeoye Samuel is Co-Founder and Executive Director at Stacbridge Holdings, where he leads enterprise strategy, corporate positioning, and portfolio growth.",
+        "He specializes in venture structuring, institutional branding, and scalable business frameworks, working closely with leadership to translate vision into execution. His focus is on strategic partnerships, ecosystem development, and building resilient, growth-driven enterprises.",
+      ],
+    },
   ];
 
   return (
@@ -36,6 +49,11 @@ export default function Architects() {
             <div className="text-left">
               <h3 className="font-semibold text-xl">{a.name}</h3>
               <p className="text-gray-500">{a.title}</p>
+              <div className="text-sm text-gray-600 space-y-2 mt-2">
+                {a.bio.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
             </div>
           </div>
         ))}
